@@ -1,0 +1,27 @@
+<section class="TVs-container">
+    <div class="container-fluid">
+        <div class="title py-3">
+            <h2 class="text-center">Top TVs</h2>
+        </div>
+        <div class="row">
+            <div *ngFor="let tv of TVs" class="col-md-3 tv">
+                <div class="box position-relative">
+                    <img [src]="imgPerfixs+tv.poster_path" alt="" class="img-fluid">
+                    <div class="rating">{{tv.vote_average}}</div>
+                    <div class="overlay p-3">
+                        <div class="box-overlay mb-2">
+                            {{tv.original_name}}
+                        </div>
+                        <div class="box-overlay mb-2">
+                            {{tv.first_air_date}}
+                        </div>
+                        <div class="box-overlay">
+                            {{tv.overview}}
+                        </div>
+                    </div>
+                </div>
+                <h4>{{tv.name}}</h4>
+            </div>
+        </div>
+    </div>
+</section>

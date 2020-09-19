@@ -1,0 +1,13 @@
+<section class="people-container">
+    <div class="container-fluid">
+        <div class="title py-3">
+            <h2 class="text-center">People</h2>
+        </div>
+        <div class="row">
+            <div *ngFor="let people of peoples" class="col-md-3 peo">
+                <img [src]="imgPerfixs+people.profile_path" alt="" class="img-fluid">
+                <h4>{{people.name}}</h4>
+            </div>
+        </div>
+    </div>
+</section>

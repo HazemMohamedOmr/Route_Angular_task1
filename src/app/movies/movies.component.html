@@ -1,0 +1,27 @@
+<section class="movies-container">
+    <div class="container-fluid">
+        <div class="title py-3">
+            <h2 class="text-center">Top Movies</h2>
+        </div>
+        <div class="row">
+            <div *ngFor="let movie of topMovies" class="col-md-3 mov">
+                <div class="box position-relative">
+                    <img [src]="imgPerfixs+movie.poster_path" alt="" class="img-fluid">
+                    <div class="rating">{{movie.vote_average}}</div>
+                    <div class="overlay p-3">
+                        <div class="box-overlay mb-2">
+                            {{movie.original_title}}
+                        </div>
+                        <div class="box-overlay mb-2">
+                            {{movie.release_date}}
+                        </div>
+                        <div class="box-overlay">
+                            {{movie.overview}}
+                        </div>
+                    </div>
+                </div>
+                <h4 class="py-2">{{movie.title}}</h4>
+            </div>
+        </div>
+    </div>
+</section>
